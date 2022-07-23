@@ -33,4 +33,9 @@ export class UserService{
        
         return this.userRepository.delete(userId.userId);
     }
+
+
+    findByName(name : string){
+        return this.userRepository.findOne({where:{name : name}})
+    }
 }
